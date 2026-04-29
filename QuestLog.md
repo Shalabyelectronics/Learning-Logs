@@ -32,4 +32,15 @@
 - **Objective:** Search for text patterns inside files.
 - **The Spell:** `grep "pattern" filename`
 - **Backend Scenario:** Scanning server logs for specific keywords like "404" or "error".
+---
+### 🏗️ Level 3.5: The Ubuntu Expansion (Proot-Distro)
+**Date:** 2026-04-29
+- **Action:** Installed a full Ubuntu environment inside Termux.
+- **Achievement:** Created multiple users (`moom`, `shalaby`) and managed `sudo` privileges.
+- **Lesson Learned:** In `proot` environments on Android, `chown` is simulated and may reset to the session user due to Kernel restrictions.
+
+### 🎯 Level 4: Process & Ownership Mastery
+- **Commands:** `ps aux`, `top`, `kill`, `chown`, `sudo`.
+- **Ownership Test:** Attempted to transfer ownership between `moom` and `shalaby`.
+- **System Insight:** Learned that `sudo` is required for ownership transfer, even if the command is restricted by the host OS (Android).
 
