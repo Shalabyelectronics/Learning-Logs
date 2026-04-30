@@ -43,4 +43,7 @@
 - **Commands:** `ps aux`, `top`, `kill`, `chown`, `sudo`.
 - **Ownership Test:** Attempted to transfer ownership between `moom` and `shalaby`.
 - **System Insight:** Learned that `sudo` is required for ownership transfer, even if the command is restricted by the host OS (Android).
+- Level 5: Explored networking with curl.
+- Task: Created 'downloads' directory and fetched remote files.
+- Insight: Mastered -o vs -O and non-blocking concepts.
 
