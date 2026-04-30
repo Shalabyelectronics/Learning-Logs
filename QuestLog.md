@@ -40,6 +40,7 @@
 - **Lesson Learned:** In `proot` environments on Android, `chown` is simulated and may reset to the session user due to Kernel restrictions.
 
 ### 🎯 Level 4: Process & Ownership Mastery
+**Date:** 2026-04-30
 - **Commands:** `ps aux`, `top`, `kill`, `chown`, `sudo`.
 - **Ownership Test:** Attempted to transfer ownership between `moom` and `shalaby`.
 - **System Insight:** Learned that `sudo` is required for ownership transfer, even if the command is restricted by the host OS (Android).
