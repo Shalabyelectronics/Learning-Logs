@@ -33,3 +33,16 @@
 - **The Spell:** `grep "pattern" filename`
 - **Backend Scenario:** Scanning server logs for specific keywords like "404" or "error".
 
+---
+### 🏗️ Level 5: The Web Explorer 🌐
+**Date:** 2026-05-01
+- **Action:** Explored networking and data fetching from the CLI.
+- **Achievement:** Used `curl` to fetch Zen quotes and download repository files.
+- **Lesson Learned:** Understood the difference between `-o` (custom name) and `-O` (original name) and the concept of "Non-blocking" I/O.
+
+### ⛓️ Level 6: The Pipe Master
+**Date:** 2026-05-01
+- **Action:** Connected multiple Linux tools into powerful command chains.
+- **Achievement:** Used Pipes (`|`) to filter processes, sort files by size, and count specific file extensions.
+- **Lesson Learned:** Mastered `grep` for searching, `head` for clipping outputs, and `wc -l` for counting results.
+
