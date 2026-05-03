@@ -60,4 +60,9 @@
 - **Action:** Connected multiple Linux tools into powerful command chains.
 - **Achievement:** Used Pipes (`|`) to filter processes, sort files by size, and count specific file extensions.
 - **Lesson Learned:** Mastered `grep` for searching, `head` for clipping outputs, and `wc -l` for counting results.
+### 🛡️ Level 7: The Gatekeeper & Batch Renamer
+**Date:** 2026-05-03
+- **Action:** Created a training sandbox and performed batch operations.
+- **Achievement:** Used a `for` loop to rename multiple files instantly and mastered `chmod` for file protection.
+- **Lesson Learned:** Even write-protected files can be deleted by the owner after a confirmation prompt.
 
