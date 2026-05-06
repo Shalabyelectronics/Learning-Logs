@@ -72,3 +72,9 @@
 - **Action:** Mastered text stream manipulation in Termux.
 - **Achievement:** Used 'less' for smart reading, 'sed' for instant string replacement, and 'grep' with Regex to extract dates.
 - **Lesson Learned:** Powerful CLI tools make mobile terminal usage as efficient as desktop.
+### 🏰 Level 10: The Architect's Trial
+**Date:** 2026-05-06
+- **Action:** Cleared the Terminal Dungeon challenge on WSL Ubuntu.
+- **Achievement:** Successfully integrated grep, sed, chmod, and loops to solve a complex environment puzzle.
+- **New Skill:** Learned how to locate files using the `find` command.
+- **Status:** Terminal Master Level reached.
