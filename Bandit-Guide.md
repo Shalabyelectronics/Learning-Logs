@@ -26,6 +26,17 @@ This file tracks my progress and technical solutions for the OverTheWire Bandit 
 * **Solution:** Wrap the name in quotes and use the relative path to avoid the dash-option error.
 * **Command:** `cat "./--spaces in this filename--"`.
 
+## 🛠️ Level 3 -> 4
+* **Goal:** Read a hidden file inside a directory.
+* **Challenge:** Files starting with `.` are hidden and don't show with a normal `ls`.
+* **Solution:** Used `ls -la` to reveal hidden files and `cat` with the exact name (including dots).
+* **Command:** `cat ./...Hiding-From-You`.
+
+## 🛠️ Level 4 -> 5
+* **Goal:** Identify the only human-readable file among multiple binary files.
+* **Challenge:** Multiple files starting with `-` containing garbled data.
+* **Solution:** Used the `file` command to scan all files and identify the one with "ASCII text" encoding.
+* **Command:** `file ./*` then `cat ./-file07`.
 ---
 ## 📚 References (APA7)
 OverTheWire Community. (2024). *Bandit wargame: Learning the Linux command line*. OverTheWire. https://overthewire.org/wargames/bandit/
