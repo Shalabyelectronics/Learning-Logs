@@ -37,6 +37,14 @@ This file tracks my progress and technical solutions for the OverTheWire Bandit 
 * **Challenge:** Multiple files starting with `-` containing garbled data.
 * **Solution:** Used the `file` command to scan all files and identify the one with "ASCII text" encoding.
 * **Command:** `file ./*` then `cat ./-file07`.
+
+## 🛠️ Level 5 -> 6
+* **Goal:** Find a specific file based on multiple criteria (size, type, and properties).
+* **Challenge:** Searching through dozens of directories and hundreds of files manually is impossible.
+* **Solution:** Used advanced `find` command with multiple filters (size, type, and logical negation).
+* **Command:** `find . -type f -size 1033c ! -executable` then `cat ./maybehere07/.file2`.
+
+
 ---
 ## 📚 References (APA7)
 OverTheWire Community. (2024). *Bandit wargame: Learning the Linux command line*. OverTheWire. https://overthewire.org/wargames/bandit/
