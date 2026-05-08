@@ -44,6 +44,13 @@ This file tracks my progress and technical solutions for the OverTheWire Bandit 
 * **Solution:** Used advanced `find` command with multiple filters (size, type, and logical negation).
 * **Command:** `find . -type f -size 1033c ! -executable` then `cat ./maybehere07/.file2`.
 
+## 🛠️ Level 6 -> 7
+* **Goal:** Find a file hidden somewhere in the entire server based on owner and group.
+* **Learned:** 
+    - Using `/` to search from the system root.
+    - Handling permission errors using `2>/dev/null` (Redirecting stderr to the null device).
+    - Filtering by `-user` and `-group`.
+* **Command:** `find / -user bandit7 -group bandit6 -size 33c 2>/dev/null`.
 
 ---
 ## 📚 References (APA7)
