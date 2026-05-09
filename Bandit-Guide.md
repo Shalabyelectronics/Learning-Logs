@@ -52,6 +52,14 @@ This file tracks my progress and technical solutions for the OverTheWire Bandit 
     - Filtering by `-user` and `-group`.
 * **Command:** `find / -user bandit7 -group bandit6 -size 33c 2>/dev/null`.
 
+## 🛠️ Level 7 -> 8
+* **Goal:** Find the password stored next to the word "millionth" in data.txt
+* **Learned:**
+    - grep is enough when you already know the file location
+    - find is for unknown file locations, grep is for unknown content locations
+    - Large files are no obstacle with the right search tool
+* **Command:** `grep -i "millionth" data.txt`
+
 ---
 ## 📚 References (APA7)
 OverTheWire Community. (2024). *Bandit wargame: Learning the Linux command line*. OverTheWire. https://overthewire.org/wargames/bandit/
