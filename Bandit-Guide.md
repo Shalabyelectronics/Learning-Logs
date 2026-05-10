@@ -60,6 +60,14 @@ This file tracks my progress and technical solutions for the OverTheWire Bandit 
     - Large files are no obstacle with the right search tool
 * **Command:** `grep -i "millionth" data.txt`
 
+## 🛠️ Level 8 -> 9
+* **Goal:** Find the only line that appears once in data.txt (all others are duplicates)
+* **Learned:**
+    - uniq only works correctly after sort (must group duplicates first)
+    - uniq -u filters to lines appearing exactly once
+    - sort | uniq is a classic pipeline combination
+* **Command:** `sort data.txt | uniq -u`
+
 ---
 ## 📚 References (APA7)
 OverTheWire Community. (2024). *Bandit wargame: Learning the Linux command line*. OverTheWire. https://overthewire.org/wargames/bandit/
