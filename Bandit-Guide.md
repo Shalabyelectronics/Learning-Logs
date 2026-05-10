@@ -68,6 +68,15 @@ This file tracks my progress and technical solutions for the OverTheWire Bandit 
     - sort | uniq is a classic pipeline combination
 * **Command:** `sort data.txt | uniq -u`
 
+## 🛠️ Level 9 -> 10
+* **Goal:** Extract the password from a binary file where it appears as human-readable text near "=" signs
+* **Learned:**
+    - strings extracts human-readable text from binary files
+    - strings -a scans the entire file including all sections
+    - Combining strings | grep is a classic pattern for binary analysis
+    - Reading --help before using a new command is the right habit
+* **Command:** `strings -a data.txt | grep "= "`
+
 ---
 ## 📚 References (APA7)
 OverTheWire Community. (2024). *Bandit wargame: Learning the Linux command line*. OverTheWire. https://overthewire.org/wargames/bandit/
