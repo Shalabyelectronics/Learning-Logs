@@ -77,6 +77,14 @@ This file tracks my progress and technical solutions for the OverTheWire Bandit 
     - Reading --help before using a new command is the right habit
 * **Command:** `strings -a data.txt | grep "= "`
 
+## 🛠️ Level 10 -> 11
+* **Goal:** Decode a Base64-encoded file to reveal the password
+* **Learned:**
+    - Base64 is encoding (not encryption) — reversible by anyone, no key needed
+    - base64 -d decodes a Base64 string
+    - Simpler is better — one command beats an unnecessary pipeline
+* **Command:** `base64 -d data.txt`
+
 ---
 ## 📚 References (APA7)
 OverTheWire Community. (2024). *Bandit wargame: Learning the Linux command line*. OverTheWire. https://overthewire.org/wargames/bandit/
