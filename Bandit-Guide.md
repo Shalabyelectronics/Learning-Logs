@@ -94,6 +94,19 @@ This file tracks my progress and technical solutions for the OverTheWire Bandit 
     - Gibberish that looks like English is often ROT13
 * **Command:** `cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'`
 
+## 🛠️ Level 12 -> 13
+* **Goal:** Decompress a file that has been compressed multiple times using different formats
+* **Learned:**
+    - xxd -r converts hexdump back to binary
+    - file identifies any file type regardless of extension
+    - gunzip for .gz, bunzip2 for .bz2, tar xf for tar archives
+    - mktemp -d creates a safe temporary working directory
+    - Pattern: file → identify → rename → decompress → repeat
+* **Command:** `xxd -r data.txt > binary && file binary` (then repeat per layer)
+
+
+
+
 ---
 ## 📚 References (APA7)
 OverTheWire Community. (2024). *Bandit wargame: Learning the Linux command line*. OverTheWire. https://overthewire.org/wargames/bandit/
