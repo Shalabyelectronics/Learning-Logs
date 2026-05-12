@@ -85,6 +85,15 @@ This file tracks my progress and technical solutions for the OverTheWire Bandit 
     - Simpler is better — one command beats an unnecessary pipeline
 * **Command:** `base64 -d data.txt`
 
+## 🛠️ Level 11 -> 12
+* **Goal:** Decode ROT13-encoded text to reveal the password
+* **Learned:**
+    - ROT13 shifts every letter 13 positions (encoding, not encryption)
+    - tr translates characters from one set to another
+    - The file command can identify unknown file types
+    - Gibberish that looks like English is often ROT13
+* **Command:** `cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'`
+
 ---
 ## 📚 References (APA7)
 OverTheWire Community. (2024). *Bandit wargame: Learning the Linux command line*. OverTheWire. https://overthewire.org/wargames/bandit/
