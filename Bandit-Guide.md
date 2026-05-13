@@ -105,7 +105,14 @@ This file tracks my progress and technical solutions for the OverTheWire Bandit 
 * **Command:** `xxd -r data.txt > binary && file binary` (then repeat per layer)
 
 
-
+## 🛠️ Level 13 -> 14
+* **Goal:** Use an SSH private key to log in as bandit14 without a password
+* **Learned:**
+    - SSH key authentication uses a private/public key pair instead of passwords
+    - Private key files must have chmod 600 or SSH rejects them
+    - scp copies files securely between machines without copy-paste corruption
+    - Copy-pasting SSH keys corrupts them — always use scp to transfer
+* **Command:** `scp -P 2220 bandit13@bandit.labs.overthewire.org:sshkey.private ~/.ssh/bandit14.key && chmod 600 ~/.ssh/bandit14.key`
 
 ---
 ## 📚 References (APA7)
