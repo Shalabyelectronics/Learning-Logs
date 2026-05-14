@@ -114,6 +114,15 @@ This file tracks my progress and technical solutions for the OverTheWire Bandit 
     - Copy-pasting SSH keys corrupts them — always use scp to transfer
 * **Command:** `scp -P 2220 bandit13@bandit.labs.overthewire.org:sshkey.private ~/.ssh/bandit14.key && chmod 600 ~/.ssh/bandit14.key`
 
+## 🛠️ Level 14 -> 15
+* **Goal:** Submit current password to port 30000 on localhost to get next password
+* **Learned:**
+    - nc (netcat) opens raw connections to any host and port
+    - Ports are like doors on a server — each service listens on a specific one
+    - echo "data" | nc host port sends data without timing issues
+    - /etc/bandit_pass/bandit14 stores the current user's password
+* **Command:** `echo "password" | nc localhost 30000`
+
 ---
 ## 📚 References (APA7)
 OverTheWire Community. (2024). *Bandit wargame: Learning the Linux command line*. OverTheWire. https://overthewire.org/wargames/bandit/
