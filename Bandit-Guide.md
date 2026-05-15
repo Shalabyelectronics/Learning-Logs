@@ -123,6 +123,15 @@ This file tracks my progress and technical solutions for the OverTheWire Bandit 
     - /etc/bandit_pass/bandit14 stores the current user's password
 * **Command:** `echo "password" | nc localhost 30000`
 
+## 🛠️ Level 15 -> 16
+* **Goal:** Submit password to port 30001 over an SSL-encrypted connection
+* **Learned:**
+    - openssl s_client opens SSL connections like nc does for plain connections
+    - SSL/TLS encrypts the connection — same technology behind HTTPS
+    - "read R BLOCK" means the connection is open and waiting for input
+    - Self-signed certificates are common in test/dev environments
+* **Command:** `openssl s_client -connect localhost:30001`
+
 ---
 ## 📚 References (APA7)
 OverTheWire Community. (2024). *Bandit wargame: Learning the Linux command line*. OverTheWire. https://overthewire.org/wargames/bandit/
