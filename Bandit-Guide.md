@@ -150,6 +150,18 @@ This file tracks my progress and technical solutions for the OverTheWire Bandit 
     - 42c42 means line 42 was changed
 * **Command:** `diff passwords.old passwords.new`
 
+## 🛠️ Level 18 -> 19
+* **Goal:** Read a file from a server that kicks you out immediately on login
+* **Learned:**
+    - .bashrc runs automatically on every interactive shell start
+    - SSH can run a single command without starting a full shell
+    - This bypasses .bashrc completely
+    - Used in real automation and DevOps scripting
+* **Command:** `ssh bandit18@bandit.labs.overthewire.org -p 2220 cat readme`
+
+
+
+
 ---
 ## 📚 References (APA7)
 OverTheWire Community. (2024). *Bandit wargame: Learning the Linux command line*. OverTheWire. https://overthewire.org/wargames/bandit/
