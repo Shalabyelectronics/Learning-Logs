@@ -132,6 +132,24 @@ This file tracks my progress and technical solutions for the OverTheWire Bandit 
     - Self-signed certificates are common in test/dev environments
 * **Command:** `openssl s_client -connect localhost:30001`
 
+## 🛠️ Level 16 -> 17
+* **Goal:** Find the correct SSL port among 31000-32000, submit password, receive RSA private key
+* **Learned:**
+    - nmap scans for open ports in a range (-p 31000-32000)
+    - nmap -sV detects what service runs on each port
+    - openssl s_client -quiet suppresses SSL noise and shows clean output
+    - Some levels return an RSA private key instead of a text password
+* **Command:** `nmap localhost -p 31000-32000 -sV` then `echo "password" | openssl s_client -connect localhost:31790 -quiet`
+
+## 🛠️ Level 17 -> 18
+* **Goal:** Find the one line that changed between two password files
+* **Learned:**
+    - diff compares two files and shows what changed
+    - < means the line from the first file (old)
+    - > means the line from the second file (new)
+    - 42c42 means line 42 was changed
+* **Command:** `diff passwords.old passwords.new`
+
 ---
 ## 📚 References (APA7)
 OverTheWire Community. (2024). *Bandit wargame: Learning the Linux command line*. OverTheWire. https://overthewire.org/wargames/bandit/
