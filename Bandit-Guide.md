@@ -169,6 +169,15 @@ This file tracks my progress and technical solutions for the OverTheWire Bandit 
     - sudo is essentially a setuid binary — same concept
 * **Command:** `./bandit20-do cat /etc/bandit_pass/bandit20`
 
+## 🛠️ Level 20 -> 21
+* **Goal:** Send current password to a setuid binary via a local TCP listener
+* **Learned:**
+    - nc -l -p PORT creates a TCP listener (server mode)
+    - & runs a command in the background, freeing the terminal
+    - Client-server communication: one side listens, other side connects
+    - Piping into nc sends data automatically when a client connects
+* **Command:** `echo "password" | nc -l -p 1234 & ./suconnect 1234`
+
 ---
 ## 📚 References (APA7)
 OverTheWire Community. (2024). *Bandit wargame: Learning the Linux command line*. OverTheWire. https://overthewire.org/wargames/bandit/
