@@ -160,7 +160,14 @@ This file tracks my progress and technical solutions for the OverTheWire Bandit 
 * **Command:** `ssh bandit18@bandit.labs.overthewire.org -p 2220 cat readme`
 
 
-
+## 🛠️ Level 19 -> 20
+* **Goal:** Use a setuid binary to read a file owned by another user
+* **Learned:**
+    - setuid bit (s) makes a program run as the file's owner, not the executor
+    - This temporarily grants another user's permissions
+    - Always check permissions with ls -la when getting "Permission denied"
+    - sudo is essentially a setuid binary — same concept
+* **Command:** `./bandit20-do cat /etc/bandit_pass/bandit20`
 
 ---
 ## 📚 References (APA7)
