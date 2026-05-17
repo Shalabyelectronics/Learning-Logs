@@ -178,6 +178,17 @@ This file tracks my progress and technical solutions for the OverTheWire Bandit 
     - Piping into nc sends data automatically when a client connects
 * **Command:** `echo "password" | nc -l -p 1234 & ./suconnect 1234`
 
+## 🛠️ Level 21 -> 22
+* **Goal:** Find a password stored by an automated cron job
+* **Learned:**
+    - Cron jobs live in /etc/cron.d/ and run scripts on a schedule
+    - * * * * * means "every minute" (minute hour day month weekday)
+    - Always read the script to trace WHERE it puts its output
+    - Scripts can write passwords to world-readable /tmp files
+* **Command:** `cat /etc/cron.d/cronjob_bandit22` → `cat /usr/bin/cronjob_bandit22.sh` → `cat /tmp/filename`
+
+
+
 ---
 ## 📚 References (APA7)
 OverTheWire Community. (2024). *Bandit wargame: Learning the Linux command line*. OverTheWire. https://overthewire.org/wargames/bandit/
