@@ -187,6 +187,15 @@ This file tracks my progress and technical solutions for the OverTheWire Bandit 
     - Scripts can write passwords to world-readable /tmp files
 * **Command:** `cat /etc/cron.d/cronjob_bandit22` → `cat /usr/bin/cronjob_bandit22.sh` → `cat /tmp/filename`
 
+## 🛠️ Level 22 -> 23
+* **Goal:** Reverse-engineer a script to calculate a dynamically generated filename
+* **Learned:**
+    - md5sum generates a unique hash fingerprint from any input
+    - cut -d ' ' -f 1 extracts the first field using space as delimiter
+    - Scripts that run as other users use that user's whoami
+    - You can predict script behavior by running it manually with the target username
+* **Command:** `echo I am user bandit23 | md5sum | cut -d ' ' -f 1` → `cat /tmp/<hash>`
+
 
 
 ---
