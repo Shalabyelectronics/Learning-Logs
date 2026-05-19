@@ -196,7 +196,14 @@ This file tracks my progress and technical solutions for the OverTheWire Bandit 
     - You can predict script behavior by running it manually with the target username
 * **Command:** `echo I am user bandit23 | md5sum | cut -d ' ' -f 1` → `cat /tmp/<hash>`
 
-
+## 🛠️ Level 23 -> 24
+* **Goal:** Write a script that runs as bandit24 via cron to steal its password
+* **Learned:**
+    - Cron jobs run scripts as their owner — exploit this by dropping scripts in watched dirs
+    - Target directory must be chmod 777 for other users to write output
+    - Existing files block writes if owned by wrong user — delete them first
+    - This is a real privilege escalation technique via misconfigured cron
+* **Command:** Write script → chmod 777 → cp to /var/spool/bandit24/foo/ → wait → cat result
 
 ---
 ## 📚 References (APA7)
