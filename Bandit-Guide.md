@@ -205,6 +205,17 @@ This file tracks my progress and technical solutions for the OverTheWire Bandit 
     - This is a real privilege escalation technique via misconfigured cron
 * **Command:** Write script → chmod 777 → cp to /var/spool/bandit24/foo/ → wait → cat result
 
+## 🛠️ Level 24 -> 25
+* **Goal:** Brute force a 4-digit PIN by trying all 10,000 combinations
+* **Learned:**
+    - Brute force = trying all possibilities systematically
+    - Piping loop output into one nc connection is faster than 10,000 connections
+    - printf "%04d" formats numbers with leading zeros
+    - grep -v filters OUT lines containing a pattern (inverse grep)
+* **Command:** `for ((i=0;i<10000;i++)); do printf "password %04d\n" $i; done | nc localhost 30002 | grep -v "Wrong"`
+
+
+
 ---
 ## 📚 References (APA7)
 OverTheWire Community. (2024). *Bandit wargame: Learning the Linux command line*. OverTheWire. https://overthewire.org/wargames/bandit/
