@@ -229,6 +229,17 @@ This file tracks my progress and technical solutions for the OverTheWire Bandit 
     - Method 1: Small terminal → SSH → more pauses → v → :e /etc/bandit_pass/bandit26
     - Method 2: Small terminal → SSH → more pauses → v → :set shell=/bin/bash → :shell
 
+
+## 🛠️ Level 26 -> 27
+* **Goal:** Use a setuid binary to read the next level's password as bandit27.
+* **Learned:**
+    - Setuid binaries (`s` bit) run with the file owner's permissions, not the caller's.
+    - Reading a binary with `cat` or `strings` can reveal usage hints.
+    - Always use `./` to run executables in the current directory.
+    - Combining vim escape (from Level 25) with setuid exploitation is a multi-step privilege chain.
+* **Command:** `./bandit27-do cat /etc/bandit_pass/bandit27`
+
+
 ---
 ## 📚 References (APA7)
 OverTheWire Community. (2024). *Bandit wargame: Learning the Linux command line*. OverTheWire. https://overthewire.org/wargames/bandit/
