@@ -261,6 +261,17 @@ This file tracks my progress and technical solutions for the OverTheWire Bandit 
 * **Command:** `git show a3437bddd447f2d496731658e86b98cbea9d3c98`
 
 
+## 🛠️ Level 29 -> 30
+* **Goal:** Find a password hidden in a non-production Git branch.
+* **Learned:**
+    - Git repos can have multiple branches (master, dev, testing, etc.).
+    - `git branch -a` lists ALL branches including remote ones.
+    - `git checkout <branch>` switches to a different branch.
+    - "No passwords in production" = the password is in a non-production branch.
+    - Real developers accidentally leak secrets in dev/feature branches all the time.
+* **Command:** `git branch -a` → `git checkout dev` → `git log` → `git show <hash>`
+
+
 
 
 
