@@ -272,6 +272,17 @@ This file tracks my progress and technical solutions for the OverTheWire Bandit 
 * **Command:** `git branch -a` → `git checkout dev` → `git log` → `git show <hash>`
 
 
+## 🛠️ Level 30 -> 31
+* **Goal:** Find a password stored inside a Git tag.
+* **Learned:**
+    - Git tags are named bookmarks that mark specific points in history (e.g., v1.0, v2.3).
+    - Unlike branches, tags don't move — they stay pinned to one commit.
+    - `git tag -l` lists all tags in a repository.
+    - `git show <tagname>` reveals the tag's contents, just like with commits.
+    - Secrets are sometimes hidden in tags, not just branches or commit history.
+* **Command:** `git tag -l` → `git show secret`
+
+
 
 
 
