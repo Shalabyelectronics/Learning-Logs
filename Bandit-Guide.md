@@ -214,7 +214,20 @@ This file tracks my progress and technical solutions for the OverTheWire Bandit 
     - grep -v filters OUT lines containing a pattern (inverse grep)
 * **Command:** `for ((i=0;i<10000;i++)); do printf "password %04d\n" $i; done | nc localhost 30002 | grep -v "Wrong"`
 
-
+## 🛠️ Level 25 -> 26
+* **Goal:** Break out of a restricted shell that runs "more" instead of bash
+* **Learned:**
+    - /etc/passwd defines each user's shell — check it to understand restrictions
+    - "more" pauses when terminal is too small to display the full file
+    - While "more" is paused, press "v" to open vim
+    - From vim: :e /path/to/file reads any file directly
+    - From vim: :set shell? shows the current shell
+    - From vim: :set shell=/bin/bash overrides the restricted shell
+    - Then :shell drops you into a full bash shell as bandit26
+    - Windows Terminal + WSL communicates terminal size more reliably
+* **Commands:** 
+    - Method 1: Small terminal → SSH → more pauses → v → :e /etc/bandit_pass/bandit26
+    - Method 2: Small terminal → SSH → more pauses → v → :set shell=/bin/bash → :shell
 
 ---
 ## 📚 References (APA7)
