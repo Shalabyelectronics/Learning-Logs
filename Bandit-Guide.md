@@ -240,6 +240,16 @@ This file tracks my progress and technical solutions for the OverTheWire Bandit 
 * **Command:** `./bandit27-do cat /etc/bandit_pass/bandit27`
 
 
+## 🛠️ Level 27 -> 28
+* **Goal:** Clone a Git repository over SSH and find the password inside.
+* **Learned:**
+    - `git clone ssh://user@host:port/path` syntax for cloning over SSH.
+    - Bandit blocks SSH connections from localhost — must clone from local machine.
+    - Git repositories can contain sensitive files (README, config, etc.).
+    - Always `ls` then `cat` to explore what's inside a cloned repo.
+* **Command:** `git clone ssh://bandit27-git@bandit.labs.overthewire.org:2220/home/bandit27-git/repo`
+
+
 ---
 ## 📚 References (APA7)
 OverTheWire Community. (2024). *Bandit wargame: Learning the Linux command line*. OverTheWire. https://overthewire.org/wargames/bandit/
