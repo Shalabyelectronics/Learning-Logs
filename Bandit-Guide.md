@@ -250,6 +250,20 @@ This file tracks my progress and technical solutions for the OverTheWire Bandit 
 * **Command:** `git clone ssh://bandit27-git@bandit.labs.overthewire.org:2220/home/bandit27-git/repo`
 
 
+## 🛠️ Level 28 -> 29
+* **Goal:** Find a password that was committed to a Git repo and then "removed."
+* **Learned:**
+    - Git history is permanent — deleted data is still in old commits.
+    - `git log` shows the full commit history with hashes and messages.
+    - `git show <hash>` reveals exactly what changed in a specific commit.
+    - Commit messages are clues — "fix info leak" signals something was hidden.
+    - This is how real secret leaks are found in public GitHub repos.
+* **Command:** `git show a3437bddd447f2d496731658e86b98cbea9d3c98`
+
+
+
+
+
 ---
 ## 📚 References (APA7)
 OverTheWire Community. (2024). *Bandit wargame: Learning the Linux command line*. OverTheWire. https://overthewire.org/wargames/bandit/
