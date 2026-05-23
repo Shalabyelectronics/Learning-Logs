@@ -294,7 +294,14 @@ This file tracks my progress and technical solutions for the OverTheWire Bandit 
 * **Command:** Remove `*.txt` from `.gitignore` → `git add key.txt .gitignore` → `git commit -m "add key.txt"` → `git push`
 
 
-
+## 🛠️ Level 32 -> 33
+* **Goal:** Escape an "uppercase shell" that converts all input to uppercase letters.
+* **Learned:**
+    - Shell special variables like `$0` contain NO letters — uppercase conversion can't affect them.
+    - `$0` expands to the name/path of the currently running shell and executes it.
+    - If the shell binary has the setuid bit, escaping it gives you a shell with the owner's permissions.
+    - When stuck on a "broken" shell, think: what can I type that has NO alphabetic characters?
+* **Command:** `$0` → escape to a normal shell → `cat /etc/bandit_pass/bandit33`
 
 ---
 ## 📚 References (APA7)
