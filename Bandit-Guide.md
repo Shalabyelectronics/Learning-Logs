@@ -283,6 +283,16 @@ This file tracks my progress and technical solutions for the OverTheWire Bandit 
 * **Command:** `git tag -l` → `git show secret`
 
 
+## 🛠️ Level 31 -> 32
+* **Goal:** Push a file with specific name and content into the remote Git repo to receive the password.
+* **Learned:**
+    - `.gitignore` silently blocks tracked files — Git won't error, it just ignores them.
+    - `*.txt` in `.gitignore` means "ignore ALL files ending in .txt".
+    - You can edit `.gitignore` to remove blocking rules and allow files to be tracked.
+    - When a push "does nothing", suspect `.gitignore` or untracked files — not the push command itself.
+    - Real engineers debug by asking: "what is BLOCKING this?" not just "what did I do wrong?"
+* **Command:** Remove `*.txt` from `.gitignore` → `git add key.txt .gitignore` → `git commit -m "add key.txt"` → `git push`
+
 
 
 
